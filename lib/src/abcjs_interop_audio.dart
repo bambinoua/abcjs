@@ -56,7 +56,7 @@ extension type CreateSynth._(JSObject _) implements JSObject {
   ///    end of the tune it is changed to the end.
   /// - "beats": The beats from the beginning of the tune. If this is passed the end
   ///    of the tune it is changed to the end.
-  external void seek(JSNumber position, [SeekUnit? units = SeekUnits.percent]);
+  external void seek(JSNumber position, [SeekUnit? units = AbcJsUnits.percent]);
 
   /// This returns the audio buffer created. (It is in WAV format.)
   external void download();
@@ -199,7 +199,7 @@ extension type SynthController._(JSObject _) implements JSObject {
   external void restart();
   external void toggleLoop();
   external void sleep(int milliseconds);
-  external void seek(JSNumber percent, [SeekUnit? units = SeekUnits.percent]);
+  external void seek(JSNumber percent, [SeekUnit? units = AbcJsUnits.percent]);
 
   /// This changes the tempo to the percent passed in. That should be a positive integer.
   /// It will change the tempo immediately if the music is already playing.
@@ -283,12 +283,12 @@ extension type AudioParamsOptions._(JSObject _) implements JSObject {
     int? program = 0,
 
     /// Whether to add a drum (or metronome) track. A string formatted like the `%%MIDI` drum
-    /// specification. Using this parameter also implies `%%MIDI drumon`. See the section
-    ///  for "Drum Parameter" for an explanation.
+    /// specification. Using this parameter also implies `%%MIDI drumon`. See [AbcjsDrumbeats]
+    /// and the section for "Drum Parameter" for an explanation.
     String? drum,
 
     /// How many bars to spread the drum pattern over. See the section for "Drum Parameter"
-    ///  for an explanation.
+    /// for an explanation.
     int? drumBars = 1,
 
     /// The number of measures of count in beats before the music starts.

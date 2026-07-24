@@ -1,6 +1,3 @@
-import 'dart:js_interop';
-
-@staticInterop
 /// If the qpm parameter is not supplied, abcjs makes its best guess about what
 /// tempo should be used. If there is no tempo indicated at all in the ABC string,
 /// then 180 BPM is arbitrarily used. If defaultQpm is supplied, then that default
@@ -11,7 +8,7 @@ import 'dart:js_interop';
 /// at an appropriate tempo. Here is a list of the known tempo strings and their
 /// associated tempos. If you would like to make suggestions about other strings
 /// to support or changes to these tempos, please get in touch:
-abstract final class AbcjsTempos {
+abstract final class AbcJsTempos {
   static const larghissimo = 20;
   static const adagissimo = 24;
   static const sostenuto = 28;

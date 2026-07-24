@@ -3,7 +3,7 @@ import 'dart:js_interop';
 import 'src/abcjs_utils.dart';
 
 /// Standard MIDI instrument helper.
-abstract final class AbcjsInstruments {
+abstract final class AbcJsInstruments {
   /// Returns name by its [index].
   static String getName(int index) {
     try {
@@ -15,7 +15,7 @@ abstract final class AbcjsInstruments {
 }
 
 /// Standard MIDI pitch helper.
-abstract final class AbcjsPitches {
+abstract final class AbcJsPitches {
   /// Returns name by its [index].
   static String getName(int index) {
     try {

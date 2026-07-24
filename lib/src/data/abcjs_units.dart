@@ -1,10 +1,7 @@
-import 'dart:js_interop';
-
-/// Represents an item of [SeekUnits]
+/// Represents an item of [AbcJsUnits]
 typedef SeekUnit = String;
 
-@staticInterop
-abstract final class SeekUnits {
+abstract final class AbcJsUnits {
   /// The percent passed in is a number between 0 and 1. This can be called either
   /// when the animation is currently running or when it is paused.
   static const percent = 'percent';
